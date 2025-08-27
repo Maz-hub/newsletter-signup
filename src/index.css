@@ -1,1 +1,63 @@
 @import "tailwindcss";
+
+@theme {
+    /* COLORS */
+    /* Grey */
+    --color-grey: #949494;
+
+    /* Blue shades */
+    --color-blue-800: #242742;
+    --color-blue-700: #36384D;
+
+    /* Red */
+    --color-red: #FF6155;
+
+    /* Gradient (you'll use bg-gradient-to-r) */
+    --color-gradient-start: #FF6A3A;
+    --color-gradient-end: #FF527B;
+
+    /* TYPOGRAPHY */
+
+    --font-roboto: "Roboto", sans-serif;
+
+    /* Preset 1 (Desktop, Bold) */
+    --text-preset-1: 56px;
+    --leading-preset-1: 100%;
+    --tracking-preset-1: 0px;
+    --font-weight-preset-1: 700;
+
+    /* Preset 1 (Mobile, Bold) */
+    --text-preset-1-mobile: 40px;
+    --leading-preset-1-mobile: 100%;
+    --tracking-preset-1-mobile: 0px;
+    --font-weight-preset-1-mobile: 700;
+
+    /* Preset 2 (Bold) */
+    --text-preset-2-bold: 16px;
+    --leading-preset-2-bold: 150%;
+    --tracking-preset-2-bold: 0px;
+    --font-weight-preset-2-bold: 700;
+
+    /* Preset 2 (Regular) */
+    --text-preset-2-regular: 16px;
+    --leading-preset-2-regular: 150%;
+    --tracking-preset-2-regular: 0px;
+    --font-weight-preset-2-regular: 400;
+
+    /* Preset 3 (Bold) */
+    --text-preset-3: 12px;
+    --leading-preset-3: 150%;
+    --tracking-preset-3: 0px;
+    --font-weight-preset-3: 700;
+
+    /* SPACING */
+    --spacing-100: 8px;
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-400: 32px;
+    --spacing-500: 40px;
+    --spacing-600: 48px;
+    --spacing-800: 64px;
+    --spacing-900: 72px;
+    --spacing-1300: 104px;
+}
