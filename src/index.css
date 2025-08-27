@@ -12,12 +12,11 @@
     /* Red */
     --color-red: #FF6155;
 
-    /* Gradient (you'll use bg-gradient-to-r) */
+    /* Gradient */
     --color-gradient-start: #FF6A3A;
     --color-gradient-end: #FF527B;
 
     /* TYPOGRAPHY */
-
     --font-roboto: "Roboto", sans-serif;
 
     /* Preset 1 (Desktop, Bold) */
@@ -60,4 +59,8 @@
     --spacing-800: 64px;
     --spacing-900: 72px;
     --spacing-1300: 104px;
+}
+
+body {
+    background-color: var(--color-blue-700);
 }
