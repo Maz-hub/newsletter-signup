@@ -1,5 +1,11 @@
+import NewsletterCard from "./components/NewsletterCard.jsx";
+
 const App = () => {
-  return <></>;
+  return (
+    <>
+      <NewsletterCard />
+    </>
+  );
 };
 
 export default App;

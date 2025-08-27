@@ -49,16 +49,6 @@
     --tracking-preset-3: 0px;
     --font-weight-preset-3: 700;
 
-    /* SPACING */
-    --spacing-100: 8px;
-    --spacing-200: 16px;
-    --spacing-300: 24px;
-    --spacing-400: 32px;
-    --spacing-500: 40px;
-    --spacing-600: 48px;
-    --spacing-800: 64px;
-    --spacing-900: 72px;
-    --spacing-1300: 104px;
 }
 
 body {
