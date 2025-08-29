@@ -1,5 +1,20 @@
 @import "tailwindcss";
 
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Regular.ttf") format("truetype");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("./assets/fonts/Roboto-Bold.ttf") format("truetype");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 @theme {
     /* COLORS */
     /* Grey */
@@ -53,4 +68,17 @@
 
 body {
     background-color: var(--color-blue-700);
+    font-family: var(--font-roboto);
+}
+
+@layer components {
+    .card {
+        @apply bg-white flex flex-col w-full max-w-[400px] mx-auto mt-[--spacing-600];
+    }
+
+
+    .heading-primary-mobile {
+        @apply text-[--text-preset-1-mobile] leading-[--leading-preset-1-mobile] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-center text-[--color-blue-800] bg-white;
+    }
+
 }
