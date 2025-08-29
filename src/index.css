@@ -88,4 +88,8 @@ body {
         @apply text-[length:var(--text-preset-2-regular)] leading-[--leading-preset-2-regular] tracking-[--tracking-preset-2-regular] [font-weight:var(--font-weight-preset-2-regular)] text-left text-[color:var(--color-blue-800)]
     }
 
+    .email-input {
+        @apply w-full h-16 pl-6 border border-[color:var(--color-grey)] rounded-[8px] mb-6
+    }
+
 }

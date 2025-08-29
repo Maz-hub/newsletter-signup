@@ -39,7 +39,13 @@ const NewsletterCard = () => {
         </div>
 
         <div>
-          <p className="text-preset-3">Email address</p>
+          <p className="text-preset-3 mb-2">Email address</p>
+          <input
+            type="email"
+            id="email"
+            placeholder="email@company.com"
+            className="email-input"
+          />
         </div>
       </div>
     </div>
