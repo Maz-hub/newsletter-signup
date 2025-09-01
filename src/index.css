@@ -15,7 +15,7 @@
 }
 
 
-@theme {
+:root {
     /* COLORS */
     /* Grey */
     --color-grey: #949494;
@@ -69,16 +69,41 @@
 body {
     background-color: var(--color-blue-700);
     font-family: var(--font-roboto);
+
+    @apply min-h-screen flex items-start justify-center py-20;
 }
 
 @layer components {
     .card {
-        @apply bg-white flex flex-col w-full max-w-[400px] mx-auto mt-[--spacing-600];
+        @apply bg-white flex flex-col w-full max-w-[400px] mx-auto min-h-screen justify-center;
     }
 
-    .text-preset-mobile {
-        @apply text-[length:var(--text-preset-1-mobile)] leading-[--leading-preset-1-mobile] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-left text-[color:var(--color-blue-800)];
+    @media (min-width: 768px) {
+        .card {
+            @apply max-w-[600px] px-10 pt-10 pb-15 rounded-2xl;
+        }
     }
+
+    .image {
+        @apply w-full rounded-b-2xl
+    }
+
+    @media (min-width: 768px) {
+        .image {
+            @apply w-full rounded-2xl;
+        }
+    }
+
+    .text-preset-1 {
+        /* ✅ Mobile-first base styles */
+        @apply text-[length:var(--text-preset-1-mobile)] leading-[--leading-preset-1-mobile] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-left text-[color:var(--color-blue-800)];
+
+        /* ✅ Desktop override styles */
+        @apply md:text-[length:var(--text-preset-1)] md:leading-[--leading-preset-1] md:tracking-[--tracking-preset-1] md:[font-weight:var(--font-weight-preset-1)];
+    }
+
+
+
 
     .text-preset-3 {
         @apply text-[length:var(--text-preset-3)] leading-[--leading-preset-3] tracking-[--tracking-preset-3] [font-weight:var(--font-weight-preset-3)] text-left text-[color:var(--color-blue-800)];
@@ -95,5 +120,7 @@ body {
     .button {
         @apply w-full py-5 text-center text-[length:var(--text-preset-2-bold)] leading-[--leading-preset-2-bold] tracking-[--tracking-preset-2-bold] [font-weight:var(--font-weight-preset-2-bold)] bg-[color:var(--color-blue-800)] text-white rounded-[8px]
     }
+
+
 
 }

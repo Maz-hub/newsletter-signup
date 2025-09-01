@@ -8,14 +8,14 @@ const NewsletterCard = () => {
         <img
           src={mobileIllustration}
           alt="Newsletter illustration"
-          className="w-full rounded-b-2xl"
+          className="image"
         />
       </div>
 
       <div className="mt-10 mx-6">
-        <h1 className="text-preset-mobile">Stay updated!</h1>
+        <h1 className="text-preset-1">Stay updated!</h1>
         <div className="my-4">
-          <p className="text-regular">
+          <p className="text-preset-regular">
             Join 60,000+ product managers receiving monthly updates on:
           </p>
         </div>
@@ -29,12 +29,14 @@ const NewsletterCard = () => {
 
           <div className="flex items-start">
             <img src={icon} alt="" className="mr-4 mb-2" />
-            <p>Measuring to ensure updates are a success</p>
+            <p className="text-preset-regular">
+              Measuring to ensure updates are a success
+            </p>
           </div>
 
           <div className="flex items-start">
             <img src={icon} alt="" className="mr-4" />
-            <p>And much more!</p>
+            <p className="text-preset-regular">And much more!</p>
           </div>
         </div>
 
