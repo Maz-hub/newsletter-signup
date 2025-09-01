@@ -92,4 +92,8 @@ body {
         @apply w-full h-16 pl-6 border border-[color:var(--color-grey)] rounded-[8px] mb-6
     }
 
+    .button {
+        @apply w-full py-5 text-center text-[length:var(--text-preset-2-bold)] leading-[--leading-preset-2-bold] tracking-[--tracking-preset-2-bold] [font-weight:var(--font-weight-preset-2-bold)] bg-[color:var(--color-blue-800)] text-white rounded-[8px]
+    }
+
 }

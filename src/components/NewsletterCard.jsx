@@ -46,6 +46,9 @@ const NewsletterCard = () => {
             placeholder="email@company.com"
             className="email-input"
           />
+          <button className="button mb-6">
+            Subscribe to monthly newsletter
+          </button>
         </div>
       </div>
     </div>
