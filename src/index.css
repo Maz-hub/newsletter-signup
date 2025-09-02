@@ -75,12 +75,18 @@ body {
 
 @layer components {
     .card {
-        @apply bg-white flex flex-col w-full max-w-[400px] mx-auto min-h-screen justify-center;
+        @apply bg-white flex flex-col w-full max-w-[400px] mx-auto justify-center;
     }
 
     @media (min-width: 768px) {
         .card {
-            @apply max-w-[600px] px-10 pt-10 pb-15 rounded-2xl;
+            @apply max-w-[600px] px-10 pt-10 pb-4 rounded-2xl;
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .card {
+            @apply flex-row max-w-[928px] rounded-2xl p-6 gap-10 items-center;
         }
     }
 
@@ -95,12 +101,13 @@ body {
     }
 
     .text-preset-1 {
-        /* ✅ Mobile-first base styles */
+        /* Mobile-first */
         @apply text-[length:var(--text-preset-1-mobile)] leading-[--leading-preset-1-mobile] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-left text-[color:var(--color-blue-800)];
 
-        /* ✅ Desktop override styles */
-        @apply md:text-[length:var(--text-preset-1)] md:leading-[--leading-preset-1] md:tracking-[--tracking-preset-1] md:[font-weight:var(--font-weight-preset-1)];
+        /* Container-based override at 768px+ */
+        @apply @3xl/Card:text-[length:var(--text-preset-1)] @3xl/Card:leading-[--leading-preset-1] @3xl/Card:tracking-[--tracking-preset-1] @3xl/Card:[font-weight:var(--font-weight-preset-1)];
     }
+
 
 
 
