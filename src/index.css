@@ -70,19 +70,19 @@ body {
     background-color: var(--color-blue-700);
     font-family: var(--font-roboto);
 
-  @apply min-h-screen overflow-y-auto flex items-center justify-center;
+    @apply min-h-screen overflow-y-auto flex items-center justify-center;
 }
 
 @layer components {
     .wrapper {
-  @apply w-full;
-}
+        @apply w-full;
+    }
 
-@media (min-width: 1024px) {
-  .wrapper {
-    @apply flex items-center justify-center min-h-screen;
-  }
-}
+    @media (min-width: 1024px) {
+        .wrapper {
+            @apply flex items-center justify-center min-h-screen;
+        }
+    }
 
 
     .card {
@@ -138,6 +138,15 @@ body {
     .button {
         @apply w-full py-5 text-center text-[length:var(--text-preset-2-bold)] leading-[--leading-preset-2-bold] tracking-[--tracking-preset-2-bold] [font-weight:var(--font-weight-preset-2-bold)] bg-[color:var(--color-blue-800)] text-white rounded-[8px]
     }
+
+    .button:hover {
+  background-image: linear-gradient(
+    to right,
+    var(--color-gradient-start),
+    var(--color-gradient-end)
+  );
+  background-color: transparent; /* fallback */
+}
 
 
 
