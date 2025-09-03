@@ -52,12 +52,16 @@ const NewsletterCard = () => {
           </div>
 
           <div>
-            <p className="text-preset-3 mb-2">Email address</p>
+            <div className="flex justify-between items-center">
+              <p className="text-preset-3 mb-2">Email address</p>
+              <p className="error-message">Valid email required</p>
+            </div>
+
             <input
               type="email"
               id="email"
               placeholder="email@company.com"
-              className="email-input"
+              className="email-input input-error"
             />
             <button className="button mb-6">
               Subscribe to monthly newsletter

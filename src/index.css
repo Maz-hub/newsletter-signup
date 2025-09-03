@@ -26,6 +26,8 @@
 
     /* Red */
     --color-red: #FF6155;
+    --color-red-bg: rgba(255, 97, 85, 0.15);
+
 
     /* Gradient */
     --color-gradient-start: #FF6A3A;
@@ -140,13 +142,23 @@ body {
     }
 
     .button:hover {
-  background-image: linear-gradient(
-    to right,
-    var(--color-gradient-start),
-    var(--color-gradient-end)
-  );
-  background-color: transparent; /* fallback */
-}
+        background-image: linear-gradient(to right,
+                var(--color-gradient-start),
+                var(--color-gradient-end));
+        background-color: transparent;
+
+    }
+
+    /* Error state for the input */
+    .input-error {
+        @apply border border-[color:var(--color-red)] bg-[color:var(--color-red-bg)] text-[color:var(--color-red)] outline-none;
+    }
+
+    /* Error message text */
+    .error-message {
+        @apply text-[length:var(--text-preset-3)] leading-[--leading-preset-3] tracking-[--tracking-preset-3] [font-weight:var(--font-weight-preset-3)] text-[color:var(--color-red)] mb-2;
+    }
+
 
 
 
