@@ -114,15 +114,15 @@ body {
     }
 
     .text-preset-1 {
-        /* Mobile-first */
+
         @apply text-[length:var(--text-preset-1-mobile)] leading-[--leading-preset-1-mobile] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-left text-[color:var(--color-blue-800)];
 
-        /* Container-based override at 768px+ */
         @apply @3xl/Card:text-[length:var(--text-preset-1)] @3xl/Card:leading-[--leading-preset-1] @3xl/Card:tracking-[--tracking-preset-1] @3xl/Card:[font-weight:var(--font-weight-preset-1)];
     }
 
-
-
+    .text-preset-1-success {
+        @apply text-[length:var(--text-preset-1)] leading-[1] tracking-[--tracking-preset-1] [font-weight:var(--font-weight-preset-1)] text-left text-[color:var(--color-blue-800)];
+    }
 
 
     .text-preset-3 {
@@ -158,6 +158,17 @@ body {
     .error-message {
         @apply text-[length:var(--text-preset-3)] leading-[--leading-preset-3] tracking-[--tracking-preset-3] [font-weight:var(--font-weight-preset-3)] text-[color:var(--color-red)] mb-2;
     }
+
+    .card-success {
+        @apply bg-white text-center lg:text-left w-full max-w-[504px] p-15 rounded-2xl flex flex-col items-center lg:items-start justify-center shadow-lg;
+    }
+
+    @media (min-width: 768px) {
+        .card-success {
+            @apply max-w-[504px];
+        }
+    }
+
 
 
 
