@@ -11,7 +11,7 @@ const SuccessCard = () => {
             className="w-16 h-16 shrink-0"
           />
 
-          <h1 className="text-preset-1-success my-8">
+          <h1 className="text-preset-1 md:text-preset-1-success my-8">
             Thanks for subscribing!
           </h1>
 

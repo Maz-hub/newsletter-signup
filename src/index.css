@@ -115,7 +115,7 @@ body {
 
     .text-preset-1 {
 
-        @apply text-[length:var(--text-preset-1-mobile)] leading-[--leading-preset-1-mobile] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-left text-[color:var(--color-blue-800)];
+        @apply text-[length:var(--text-preset-1-mobile)] leading-[1] tracking-[--tracking-preset-1-mobile] [font-weight:var(--font-weight-preset-1-mobile)] text-left text-[color:var(--color-blue-800)];
 
         @apply @3xl/Card:text-[length:var(--text-preset-1)] @3xl/Card:leading-[--leading-preset-1] @3xl/Card:tracking-[--tracking-preset-1] @3xl/Card:[font-weight:var(--font-weight-preset-1)];
     }
@@ -171,6 +171,19 @@ body {
         .wrapper-mobile {
             @apply bg-white;
         }
+
+        .card-success {
+            @apply h-[623px] w-full max-w-[327px] p-6 flex flex-col justify-between;
+        }
+
+        .card-success>div {
+            @apply flex flex-col flex-1;
+        }
+
+        .button {
+            @apply mt-auto w-full;
+        }
+
     }
 
 
