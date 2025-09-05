@@ -7,11 +7,8 @@ const App = () => {
   const [view, setView] = useState("main");
   return (
     <>
-      {view === "success" ? (
-        <SuccessCard setView={setView} />
-      ) : (
-        <NewsletterCard view={view} setView={setView} />
-      )}
+      {view === "main" && <NewsletterCard setView={setView} />}
+      {view === "success" && <SuccessCard setView={setView} />}
     </>
   );
 };

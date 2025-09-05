@@ -4,7 +4,7 @@ import mobileIllustration from "../assets/images/illustration-sign-up-mobile.svg
 import desktopIllustration from "../assets/images/illustration-sign-up-desktop.svg";
 import icon from "../assets/images/icon-list.svg";
 
-const NewsletterCard = () => {
+const NewsletterCard = ({ setView }) => {
   const [email, setEmail] = useState("");
   const [isError, setIsError] = useState(false);
 
@@ -19,6 +19,7 @@ const NewsletterCard = () => {
 
     if (emailRegex.test(email)) {
       setIsError(false);
+      setView("success");
     } else {
       setIsError(true);
     }
