@@ -12,6 +12,16 @@ const NewsletterCard = () => {
     setEmail(e.target.value);
   }
 
+  function handleSubmit(e) {
+    e.preventDefault();
+
+    if (email.includes("@") && email.includes(".")) {
+      setIsError(false);
+    } else {
+      setIsError(true);
+    }
+  }
+
   return (
     <div className="wrapper">
       <div className="card">
@@ -75,7 +85,7 @@ const NewsletterCard = () => {
               placeholder="email@company.com"
               className={`email-input ${isError ? "input-error" : ""}`}
             />
-            <button className="button mb-6">
+            <button onClick={handleSubmit} className="button mb-6">
               Subscribe to monthly newsletter
             </button>
           </div>
