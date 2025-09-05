@@ -17,7 +17,7 @@ const NewsletterCard = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (emailRegex.text(email)) {
+    if (emailRegex.test(email)) {
       setIsError(false);
     } else {
       setIsError(true);
