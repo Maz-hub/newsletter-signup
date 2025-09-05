@@ -1,10 +1,11 @@
-
 import icon from "../assets/images/icon-list.svg";
 
+const SuccessCard = ({ setView, email, setEmail }) => {
+  function handleClick() {
+    setView("main");
+    setEmail("");
+  }
 
-
-
-const SuccessCard = () => {
   return (
     <div className="wrapper-mobile">
       <div className="card-success">
@@ -20,12 +21,14 @@ const SuccessCard = () => {
           </h1>
 
           <p className="text-preset-regular mb-8 lg:text-left">
-            A confirmation email has been sent to{" "}
-            <strong>ash@loremcompany.com</strong>. Please open it and click the
-            button inside to confirm your subscription.
+            A confirmation email has been sent to <strong>{email}</strong>.
+            Please open it and click the button inside to confirm your
+            subscription.
           </p>
 
-          <button className="button">Dismiss message</button>
+          <button onClick={handleClick} className="button">
+            Dismiss message
+          </button>
         </div>
       </div>
     </div>

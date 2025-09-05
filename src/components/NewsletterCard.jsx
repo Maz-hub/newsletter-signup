@@ -4,8 +4,7 @@ import mobileIllustration from "../assets/images/illustration-sign-up-mobile.svg
 import desktopIllustration from "../assets/images/illustration-sign-up-desktop.svg";
 import icon from "../assets/images/icon-list.svg";
 
-const NewsletterCard = ({ setView }) => {
-  const [email, setEmail] = useState("");
+const NewsletterCard = ({ setView, email, setEmail }) => {
   const [isError, setIsError] = useState(false);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
