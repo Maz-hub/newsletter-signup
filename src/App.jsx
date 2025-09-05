@@ -4,7 +4,7 @@ import SuccessCard from "./components/SuccessCard.jsx";
 const App = () => {
   return (
     <>
-      <SuccessCard />
+      <NewsletterCard />
     </>
   );
 };

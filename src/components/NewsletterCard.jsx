@@ -1,9 +1,17 @@
+import { useState } from "react";
+
 import mobileIllustration from "../assets/images/illustration-sign-up-mobile.svg";
 import desktopIllustration from "../assets/images/illustration-sign-up-desktop.svg";
-
 import icon from "../assets/images/icon-list.svg";
 
 const NewsletterCard = () => {
+  const [email, setEmail] = useState("");
+  const [isError, setIsError] = useState(false);
+
+  function handleEmail(e) {
+    setEmail(e.target.value);
+  }
+
   return (
     <div className="wrapper">
       <div className="card">
@@ -54,14 +62,18 @@ const NewsletterCard = () => {
           <div>
             <div className="flex justify-between items-center">
               <p className="text-preset-3 mb-2">Email address</p>
-              <p className="error-message">Valid email required</p>
+              <p className={`error-message ${!isError && "hidden"}`}>
+                Valid email required
+              </p>
             </div>
 
             <input
               type="email"
+              value={email}
+              onChange={handleEmail}
               id="email"
               placeholder="email@company.com"
-              className="email-input input-error"
+              className={`email-input ${isError ? "input-error" : ""}`}
             />
             <button className="button mb-6">
               Subscribe to monthly newsletter
