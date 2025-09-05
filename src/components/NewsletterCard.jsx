@@ -8,6 +8,8 @@ const NewsletterCard = () => {
   const [email, setEmail] = useState("");
   const [isError, setIsError] = useState(false);
 
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
   function handleEmail(e) {
     setEmail(e.target.value);
   }
@@ -15,7 +17,7 @@ const NewsletterCard = () => {
   function handleSubmit(e) {
     e.preventDefault();
 
-    if (email.includes("@") && email.includes(".")) {
+    if (emailRegex.text(email)) {
       setIsError(false);
     } else {
       setIsError(true);
